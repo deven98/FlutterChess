@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chess/pages/home_page.dart';
+import 'package:flutter_chess/pages/openings_page.dart';
+import 'package:flutter_chess/pages/pieces_page.dart';
+import 'package:flutter_chess/pages/play_game_page.dart';
 import 'package:flutter_chess/pages/splash_screen.dart';
 
 void main() => runApp(new MyApp());
@@ -12,6 +16,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: SplashScreen(),
+      debugShowCheckedModeBanner: false,
+      routes: {
+        '/home_page': (context) => HomePage(),
+        '/pieces_page': (context) => PiecesPage(),
+        '/openings_page': (context) => OpeningsPage(),
+        '/play_game_page': (context) => PlayGamePage(),
+      },
     );
   }
 }

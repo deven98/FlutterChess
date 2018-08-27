@@ -2,6 +2,8 @@ name: flutter_chess
 description: A beautiful app to learn about chess.
 
 dependencies:
+  flutter_chess_board: ^0.2.1
+  chess_vectors_flutter: ^1.0.6
   flutter:
     sdk: flutter
 

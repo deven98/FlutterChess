@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:chess_vectors_flutter/chess_vectors_flutter.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -12,6 +15,9 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   void initState() {
     _controller = AnimationController(vsync: this);
     super.initState();
+    Future.delayed(Duration(seconds: 1)).then((value) {
+      Navigator.of(context).pushReplacementNamed('/home_page');
+    });
   }
 
   @override
@@ -23,11 +29,19 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                FlutterLogo(size: 40.0,),
+                Text("Chess", style: TextStyle(fontSize: 40.0),),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

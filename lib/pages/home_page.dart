@@ -11,13 +11,9 @@ class _HomePageState extends State<HomePage> {
   var titleFontSize = 24.0;
 
   @override
-  void initState() {
-    super.initState();
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
-  }
-
-  @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
 
     return Scaffold(
       body: SafeArea(

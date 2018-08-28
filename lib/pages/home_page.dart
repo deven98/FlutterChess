@@ -1,5 +1,6 @@
 import 'package:chess_vectors_flutter/chess_vectors_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -10,20 +11,25 @@ class _HomePageState extends State<HomePage> {
   var titleFontSize = 24.0;
 
   @override
+  void initState() {
+    super.initState();
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+  }
+
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
             children: <Widget>[
               Container(
                 child: Row(
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 16.0),
+                          horizontal: 8.0, vertical: 32.0),
                       child: FlutterLogo(
                         size: 30.0,
                       ),

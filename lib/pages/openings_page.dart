@@ -8,7 +8,7 @@ class OpeningsPage extends StatefulWidget {
 class _OpeningsPageState extends State<OpeningsPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
 

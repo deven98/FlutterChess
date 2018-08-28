@@ -4,6 +4,7 @@ description: A beautiful app to learn about chess.
 dependencies:
   flutter_chess_board: ^0.2.2
   chess_vectors_flutter: ^1.0.6
+  flutter_statusbar_manager: ^1.0.2
   flutter:
     sdk: flutter
 

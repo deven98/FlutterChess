@@ -77,12 +77,14 @@ class PieceCard extends StatelessWidget {
               children: <Widget>[
                 Expanded(
                   flex: 1,
-                  child: Material(
-                    child: Hero(
-                      child: leftWidget,
-                      tag: heroTag,
+                  child: Center(
+                    child: Material(
+                      child: Hero(
+                        child: leftWidget,
+                        tag: heroTag,
+                      ),
+                      color: Colors.white,
                     ),
-                    color: Colors.white,
                   ),
                 ),
                 Expanded(

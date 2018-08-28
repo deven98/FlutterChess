@@ -1,6 +1,7 @@
 import 'package:chess_vectors_flutter/chess_vectors_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_statusbar_manager/flutter_statusbar_manager.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,6 +10,18 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   var titleFontSize = 24.0;
+
+  void _changeStatusBarColor() async {
+    await FlutterStatusbarManager.setHidden(true);
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if(Theme.of(context).platform == TargetPlatform.android) {
+      _changeStatusBarColor();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

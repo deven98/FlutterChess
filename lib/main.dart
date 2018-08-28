@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: Theme.of(context).platform == TargetPlatform.android ? "Raleway" : null,
       ),
       home: SplashScreen(),
       debugShowCheckedModeBanner: false,

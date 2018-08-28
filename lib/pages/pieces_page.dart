@@ -9,7 +9,6 @@ class PiecesPage extends StatefulWidget {
 }
 
 class _PiecesPageState extends State<PiecesPage> {
-
   @override
   void initState() {
     super.initState();
@@ -30,19 +29,21 @@ class _PiecesPageState extends State<PiecesPage> {
             Widget widget = pieces[position].pieceWidget;
 
             return PieceCard(
-                leftWidget: widget,
-                rightWidget: Text(
-                  name,
-                  style: TextStyle(fontSize: 16.0),
-                ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => PieceDetailPage(position: position,),
-                    ),
-                  );
-                },
+              leftWidget: widget,
+              rightWidget: Text(
+                name,
+                style: TextStyle(fontSize: 16.0),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PieceDetailPage(
+                          position: position,
+                        ),
+                  ),
+                );
+              },
               heroTag: "Piece$position",
             );
           },
@@ -76,7 +77,13 @@ class PieceCard extends StatelessWidget {
               children: <Widget>[
                 Expanded(
                   flex: 1,
-                  child: Material(child: Hero(child: leftWidget, tag: heroTag,),color: Colors.white,),
+                  child: Material(
+                    child: Hero(
+                      child: leftWidget,
+                      tag: heroTag,
+                    ),
+                    color: Colors.white,
+                  ),
                 ),
                 Expanded(
                   flex: 3,

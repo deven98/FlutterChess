@@ -12,7 +12,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
 
     return Scaffold(
@@ -49,10 +48,9 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           "Explore how chess pieces move on a chessboard",
                           style: TextStyle(fontSize: 18.0),
-                        ),
-                        () {
-                          Navigator.pushNamed(context, '/pieces_page');
-                        }),
+                        ), () {
+                      Navigator.pushNamed(context, '/pieces_page');
+                    }),
                   ],
                 ),
               ),
@@ -69,10 +67,9 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           "Learn commonly played chess openings",
                           style: TextStyle(fontSize: 18.0),
-                        ),
-                        () {
-                          Navigator.pushNamed(context, '/openings_page');
-                        }),
+                        ), () {
+                      Navigator.pushNamed(context, '/openings_page');
+                    }),
                   ],
                 ),
               ),
@@ -89,10 +86,9 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           "Play chess with a friend on the same device",
                           style: TextStyle(fontSize: 18.0),
-                        ),
-                        () {
-                          Navigator.pushNamed(context, '/play_game_page');
-                        }),
+                        ), () {
+                      Navigator.pushNamed(context, '/play_game_page');
+                    }),
                   ],
                 ),
               ),
@@ -117,9 +113,7 @@ class SectionCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8.0)
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
         elevation: 4.0,
         child: InkWell(
           onTap: onTap,

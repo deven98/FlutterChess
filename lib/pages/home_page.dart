@@ -34,18 +34,31 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               Container(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 32.0),
-                      child: FlutterLogo(
-                        size: 30.0,
+                    Container(
+                      child: Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8.0, vertical: 36.0),
+                            child: FlutterLogo(
+                              size: 30.0,
+                            ),
+                          ),
+                          Text(
+                            "Chess",
+                            style: TextStyle(fontSize: 30.0),
+                          ),
+                        ],
                       ),
                     ),
-                    Text(
-                      "Chess",
-                      style: TextStyle(fontSize: 30.0),
-                    ),
+                    PopupMenuButton(itemBuilder: (context) {
+                      return [PopupMenuItem(child: Text("About us"), value: 0,)];
+                    },
+                    onSelected: (value) {
+                      Navigator.pushNamed(context, '/developer_details_page');
+                    },)
                   ],
                 ),
               ),

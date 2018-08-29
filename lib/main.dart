@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chess/pages/developer_details_page.dart';
 import 'package:flutter_chess/pages/home_page.dart';
 import 'package:flutter_chess/pages/openings_page.dart';
 import 'package:flutter_chess/pages/pieces_page.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/pieces_page': (context) => PiecesPage(),
         '/openings_page': (context) => OpeningsPage(),
         '/play_game_page': (context) => PlayGamePage(),
+        '/developer_details_page': (context) => DeveloperDetailsPage(),
       },
     );
   }

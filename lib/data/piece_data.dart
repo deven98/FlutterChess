@@ -4,7 +4,7 @@ import 'package:flutter_chess_board/flutter_chess_board.dart';
 
 double pieceSize = 60.0;
 
-List pieces = [
+List<ChessPiece> pieces = [
   ChessPiece(
       "King",
       PieceType.King,

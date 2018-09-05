@@ -9,6 +9,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/circular_animation_demo/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/circular_animation_demo/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/circular_animation_demo/build" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_statusbar_manager/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_statusbar_manager/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_statusbar_manager/build" />
